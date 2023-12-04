@@ -17,9 +17,8 @@ class MotivacionalCard extends StatelessWidget {
         margin: const EdgeInsets.symmetric(vertical: 30),
         decoration: const BoxDecoration(
           image: DecorationImage(
-            image: NetworkImage(
-                ''),
-            fit: BoxFit.fitWidth,
+            image: AssetImage('assets/images/background.jpg'),
+            fit: BoxFit.cover,
           ),
         ),
         child: Container(
