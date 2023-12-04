@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+ import 'package:flutter/material.dart';
 import 'package:flutter_carousel_widget/flutter_carousel_widget.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:landing_page/breakpoints.dart';
@@ -47,7 +47,7 @@ class Problem2 extends StatelessWidget {
                     text: loremIpsum(paragraphs: 1, words: 50)),
               ],
                   options: CarouselOptions(
-                    height: 300,
+                    height: 400,
                     autoPlay: true,
                     autoPlayInterval: const Duration(seconds: 10),
                     autoPlayAnimationDuration:

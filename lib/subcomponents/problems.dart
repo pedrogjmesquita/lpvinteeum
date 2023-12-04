@@ -9,7 +9,7 @@ class Problems extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
-      mainAxisAlignment: MainAxisAlignment.center,
+      mainAxisAlignment: MainAxisAlignment.start,
       children: [
         Text(tittle,
             style: GoogleFonts.rubik(

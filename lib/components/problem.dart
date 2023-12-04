@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:landing_page/breakpoints.dart';
 import 'package:landing_page/colors.dart';
-import 'package:landing_page/components/header.dart';
 
 class Problem extends StatelessWidget {
   const Problem({super.key});
@@ -26,11 +25,10 @@ class Problem extends StatelessWidget {
               Row(mainAxisAlignment: MainAxisAlignment.spaceAround, children: [
             Column(children: [
               Text('Problema',
-                  style: TextStyle(
+                  style: GoogleFonts.rubik(
                     fontSize: 50,
                     fontWeight: FontWeight.bold,
                     color: Colors.white,
-                    fontFamily: GoogleFonts.rubik().fontFamily,
                   )),
               const SizedBox(height: 30),
               Text('Frase de efeito',
@@ -48,13 +46,6 @@ class Problem extends StatelessWidget {
                     maxWidth: maxDefinedWidth / 3,
                   ),
                   padding: const EdgeInsets.all(30),
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(30),
-                    border: Border.all(
-                      color: Colors.black,
-                      width: 1,
-                    ),
-                  ),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.stretch,
                     children: [
