@@ -9,11 +9,20 @@ class FAQ extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return LayoutBuilder(builder: (context, constraints) {
-      double maxDefinedWidth = (constraints.maxWidth > tabletBreakpoint
-          ? 1100
-          : (constraints.maxWidth > mobileBreakpoint)
-              ? 768
-              : 300);
+      double maxDefinedWidth = 300;
+      bool isMobile = true;
+
+      if (constraints.maxWidth > mobileBreakpoint) {
+        isMobile = false;
+        if (constraints.maxWidth > tabletBreakpoint) {
+          maxDefinedWidth = 1100;
+        } else {
+          maxDefinedWidth = 768;
+        }
+      } else {
+        maxDefinedWidth = 300;
+        isMobile = true;
+      }
 
       return Container(
         margin: const EdgeInsets.symmetric(vertical: 30),
@@ -21,37 +30,57 @@ class FAQ extends StatelessWidget {
           maxWidth: maxDefinedWidth,
         ),
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
           children: [
             Text('Perguntas Frequentes',
                 style: GoogleFonts.rubik(
-                  fontSize: 50,
+                  fontSize: isMobile ? 35 : 50,
                   fontWeight: FontWeight.bold,
                   color: Colors.white,
                 )),
             const SizedBox(height: 30),
-            const Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Column(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Question(question: 'Pergunta 1', answer: 'Resposta 1'),
-                    Question(question: 'Pergunta 2', answer: 'Resposta 2'),
-                    Question(question: 'Pergunta 3', answer: 'Resposta 3'),
-                  ],
-                ),
-                Column(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Question(question: 'Pergunta 4', answer: 'Resposta 4'),
-                    Question(question: 'Pergunta 5', answer: 'Resposta 5'),
-                    Question(question: 'Pergunta 6', answer: 'Resposta 6'),
-                  ],
-                ),
-              ],
-            )
+            isMobile
+                ? const Column(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Question(question: 'Pergunta 1', answer: 'Resposta 1'),
+                      Question(question: 'Pergunta 2', answer: 'Resposta 2'),
+                      Question(question: 'Pergunta 3', answer: 'Resposta 3'),
+                      Question(question: 'Pergunta 4', answer: 'Resposta 4'),
+                      Question(question: 'Pergunta 5', answer: 'Resposta 5'),
+                      Question(question: 'Pergunta 6', answer: 'Resposta 6'),
+                    ],
+                  )
+                : const Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Column(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Question(
+                              question: 'Pergunta 1', answer: 'Resposta 1'),
+                          Question(
+                              question: 'Pergunta 2', answer: 'Resposta 2'),
+                          Question(
+                              question: 'Pergunta 3', answer: 'Resposta 3'),
+                        ],
+                      ),
+                      Column(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Question(
+                              question: 'Pergunta 4', answer: 'Resposta 4'),
+                          Question(
+                              question: 'Pergunta 5', answer: 'Resposta 5'),
+                          Question(
+                              question: 'Pergunta 6', answer: 'Resposta 6'),
+                        ],
+                      ),
+                    ],
+                  )
           ],
         ),
       );
