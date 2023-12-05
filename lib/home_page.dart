@@ -19,9 +19,10 @@ class HomePage extends StatelessWidget {
         appBar: const PreferredSize(
             preferredSize: Size(double.infinity, 60), child: WebAppBar()),
         body: Container(
-          decoration: const BoxDecoration(
+          decoration: BoxDecoration(
+            // color: Colors.black,
             gradient: LinearGradient(
-              colors: colors,
+              colors: colors.sublist(1,4),
               begin: Alignment.topLeft,
               end: Alignment.bottomRight,
             ),

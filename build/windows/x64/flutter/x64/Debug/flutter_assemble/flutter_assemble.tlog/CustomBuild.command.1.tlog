@@ -1,0 +1,28 @@
+^C:\USERS\CAIOM\DESKTOP\21\LPVINTEEUM\BUILD\WINDOWS\X64\CMAKEFILES\DC0E123748ACADF678EB26CE70788416\FLUTTER_WINDOWS.DLL.RULE
+setlocal
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E env FLUTTER_ROOT=C:\Users\caiom\Downloads\src\flutter\flutter_windows_3.7.3-stable\flutter PROJECT_DIR=C:\Users\caiom\Desktop\21\lpvinteeum FLUTTER_ROOT=C:\Users\caiom\Downloads\src\flutter\flutter_windows_3.7.3-stable\flutter FLUTTER_EPHEMERAL_DIR=C:\Users\caiom\Desktop\21\lpvinteeum\windows\flutter\ephemeral PROJECT_DIR=C:\Users\caiom\Desktop\21\lpvinteeum FLUTTER_TARGET=C:\Users\caiom\Desktop\21\lpvinteeum\lib\main.dart DART_DEFINES=Zmx1dHRlci5pbnNwZWN0b3Iuc3RydWN0dXJlZEVycm9ycz1mYWxzZQ==,RkxVVFRFUl9XRUJfQVVUT19ERVRFQ1Q9dHJ1ZQ==,RkxVVFRFUl9XRUJfQ0FOVkFTS0lUX1VSTD1odHRwczovL3d3dy5nc3RhdGljLmNvbS9mbHV0dGVyLWNhbnZhc2tpdC9jZjdhOWQwODAwZjJhNWRhMTY2ZGJlMGViOWZiMjQ3NjAxODI2OWIxLw== DART_OBFUSCATION=false TRACK_WIDGET_CREATION=true TREE_SHAKE_ICONS=false PACKAGE_CONFIG=C:\Users\caiom\Desktop\21\lpvinteeum\.dart_tool\package_config.json C:/Users/caiom/Downloads/src/flutter/flutter_windows_3.7.3-stable/flutter/packages/flutter_tools/bin/tool_backend.bat windows-x64 Debug
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\USERS\CAIOM\DESKTOP\21\LPVINTEEUM\BUILD\WINDOWS\X64\CMAKEFILES\04476FBE65C7EDCA01D7CAFDDD3EA0AA\FLUTTER_ASSEMBLE.RULE
+setlocal
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\USERS\CAIOM\DESKTOP\21\LPVINTEEUM\WINDOWS\FLUTTER\CMAKELISTS.TXT
+setlocal
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SC:/Users/caiom/Desktop/21/lpvinteeum/windows -BC:/Users/caiom/Desktop/21/lpvinteeum/build/windows/x64 --check-stamp-file C:/Users/caiom/Desktop/21/lpvinteeum/build/windows/x64/flutter/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

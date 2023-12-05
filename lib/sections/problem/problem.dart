@@ -19,10 +19,11 @@ class Problem extends StatelessWidget {
                     image: const AssetImage('web/assets/images/background.jpg'),
                     alignment: Alignment.bottomCenter,
                     colorFilter: ColorFilter.mode(
-                      Colors.black.withOpacity(0.25),
+                      Colors.black.withOpacity(0.3),
                       BlendMode.dstATop,
                     ),
                   ),
+                  color: Colors.black,
                 ),
 
                 child: Row(
@@ -41,12 +42,12 @@ class Problem extends StatelessWidget {
                     image: const AssetImage('web/assets/images/background.jpg'),
                     alignment: Alignment.bottomCenter,
                     colorFilter: ColorFilter.mode(
-                      Colors.black.withOpacity(0.25),
+                      Colors.black.withOpacity(0.3),
                       BlendMode.dstATop,
                     ),
                   ),
+                  color: Colors.black,
                 ),
-
                 child: Column(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     crossAxisAlignment: CrossAxisAlignment.center,

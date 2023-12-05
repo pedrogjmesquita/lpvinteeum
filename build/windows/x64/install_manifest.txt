@@ -1,0 +1,15 @@
+C:/Users/caiom/Desktop/21/lpvinteeum/build/windows/x64/runner/Debug/data/icudtl.dat
+C:/Users/caiom/Desktop/21/lpvinteeum/build/windows/x64/runner/Debug/flutter_windows.dll
+C:/Users/caiom/Desktop/21/lpvinteeum/build/windows/x64/runner/Debug/url_launcher_windows_plugin.dll
+C:/Users/caiom/Desktop/21/lpvinteeum/build/windows/x64/runner/Debug/data/flutter_assets/AssetManifest.bin
+C:/Users/caiom/Desktop/21/lpvinteeum/build/windows/x64/runner/Debug/data/flutter_assets/AssetManifest.bin.json
+C:/Users/caiom/Desktop/21/lpvinteeum/build/windows/x64/runner/Debug/data/flutter_assets/AssetManifest.json
+C:/Users/caiom/Desktop/21/lpvinteeum/build/windows/x64/runner/Debug/data/flutter_assets/FontManifest.json
+C:/Users/caiom/Desktop/21/lpvinteeum/build/windows/x64/runner/Debug/data/flutter_assets/fonts/MaterialIcons-Regular.otf
+C:/Users/caiom/Desktop/21/lpvinteeum/build/windows/x64/runner/Debug/data/flutter_assets/kernel_blob.bin
+C:/Users/caiom/Desktop/21/lpvinteeum/build/windows/x64/runner/Debug/data/flutter_assets/NOTICES
+C:/Users/caiom/Desktop/21/lpvinteeum/build/windows/x64/runner/Debug/data/flutter_assets/NOTICES.Z
+C:/Users/caiom/Desktop/21/lpvinteeum/build/windows/x64/runner/Debug/data/flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf
+C:/Users/caiom/Desktop/21/lpvinteeum/build/windows/x64/runner/Debug/data/flutter_assets/shaders/ink_sparkle.frag
+C:/Users/caiom/Desktop/21/lpvinteeum/build/windows/x64/runner/Debug/data/flutter_assets/web/assets/images/background.jpg
+C:/Users/caiom/Desktop/21/lpvinteeum/build/windows/x64/runner/Debug/data/flutter_assets/web/assets/images/vinte_e_um_logo.png
