@@ -1,9 +1,7 @@
- import 'package:flutter/material.dart';
-import 'package:flutter_carousel_widget/flutter_carousel_widget.dart';
+import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:landing_page/breakpoints.dart';
-import 'package:landing_page/subcomponents/problems.dart';
-import 'package:lorem_ipsum/lorem_ipsum.dart';
+import 'package:landing_page/sections/problem2/problem_carousel.dart';
 
 class Problem2 extends StatelessWidget {
   const Problem2({super.key});
@@ -16,48 +14,42 @@ class Problem2 extends StatelessWidget {
           : (constraints.maxWidth > mobileBreakpoint)
               ? 768
               : 300);
+
       return Container(
-        margin: const EdgeInsets.symmetric(vertical: 30),
-        constraints: BoxConstraints(
-          maxWidth: maxDefinedWidth,
-        ),
-        child: Row(children: [
-          Expanded(
-              child: Text('Problema\nAmplificado',
-                  style: GoogleFonts.rubik(
-                    fontSize: 50,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.white,
-                  ),
-                  textAlign: TextAlign.center)),
-          Expanded(
-              child: FlutterCarousel(
-                  items: [
-                Problems(
-                    tittle: 'Problema 1',
-                    text: loremIpsum(paragraphs: 1, words: 50)),
-                Problems(
-                    tittle: 'Problema 2',
-                    text: loremIpsum(paragraphs: 1, words: 50)),
-                Problems(
-                    tittle: 'Problema 3',
-                    text: loremIpsum(paragraphs: 1, words: 50)),
-                Problems(
-                    tittle: 'Problema 4',
-                    text: loremIpsum(paragraphs: 1, words: 50)),
-              ],
-                  options: CarouselOptions(
-                    height: 400,
-                    autoPlay: true,
-                    autoPlayInterval: const Duration(seconds: 10),
-                    autoPlayAnimationDuration:
-                        const Duration(milliseconds: 800),
-                    autoPlayCurve: Curves.fastOutSlowIn,
-                    enlargeCenterPage: true,
-                    scrollDirection: Axis.horizontal,
-                  ))),
-        ]),
-      );
+          margin: const EdgeInsets.symmetric(vertical: 30),
+          constraints: BoxConstraints(
+            maxWidth: maxDefinedWidth,
+          ),
+          child: constraints.maxWidth > mobileBreakpoint
+              ? Row(children: [
+                  Expanded(
+                      child: Text('Problema\nAmplificado',
+                          style: GoogleFonts.rubik(
+                            fontSize: 50,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.white,
+                          ),
+                          textAlign: TextAlign.center)),
+                  const Expanded(
+                      child: ProblemCarousel(
+                    isMobile: false,
+                  )),
+                ])
+              : Column(
+                  children: [
+                    Text('Problema\nAmplificado',
+                        style: GoogleFonts.rubik(
+                          fontSize: 35,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white,
+                        ),
+                        textAlign: TextAlign.center),
+                    const SizedBox(height: 30),
+                    const ProblemCarousel(
+                      isMobile: true,
+                    ),
+                  ],
+                ));
     });
   }
 }
