@@ -8,11 +8,20 @@ class Walkthrough extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return LayoutBuilder(builder: (context, constraints) {
-      double maxDefinedWidth = (constraints.maxWidth > tabletBreakpoint
-          ? 1100
-          : (constraints.maxWidth > mobileBreakpoint)
-              ? 768
-              : 300);
+      double maxDefinedWidth = 300;
+      bool isMobile = true;
+
+      if (constraints.maxWidth > mobileBreakpoint) {
+        isMobile = false;
+        if (constraints.maxWidth > tabletBreakpoint) {
+          maxDefinedWidth = 1100;
+        } else {
+          maxDefinedWidth = 768;
+        }
+      } else {
+        maxDefinedWidth = 300;
+        isMobile = true;
+      }
 
       return Container(
           margin: const EdgeInsets.symmetric(vertical: 30),
@@ -25,7 +34,7 @@ class Walkthrough extends StatelessWidget {
             children: [
               Text('Passo a Passo',
                   style: GoogleFonts.rubik(
-                    fontSize: 50,
+                    fontSize: isMobile ? 35 : 50,
                     fontWeight: FontWeight.bold,
                     color: Colors.white,
                   )),
@@ -33,7 +42,7 @@ class Walkthrough extends StatelessWidget {
               Text('1. Compra do Questionário',
                   textAlign: TextAlign.left,
                   style: GoogleFonts.rubik(
-                    fontSize: 30,
+                    fontSize: isMobile ? 25 : 30,
                     fontWeight: FontWeight.bold,
                     color: Colors.white,
                   )),
@@ -55,7 +64,7 @@ class Walkthrough extends StatelessWidget {
               Text('2. Responda às Perguntas',
                   textAlign: TextAlign.left,
                   style: GoogleFonts.rubik(
-                    fontSize: 30,
+                    fontSize: isMobile ? 25 : 30,
                     fontWeight: FontWeight.bold,
                     color: Colors.white,
                   )),
@@ -71,7 +80,7 @@ class Walkthrough extends StatelessWidget {
               Text('3. Receba Seu Relatório Personalizado',
                   textAlign: TextAlign.left,
                   style: GoogleFonts.rubik(
-                    fontSize: 30,
+                    fontSize: isMobile ? 25 : 30,
                     fontWeight: FontWeight.bold,
                     color: Colors.white,
                   )),
