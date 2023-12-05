@@ -1,15 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:landing_page/colors.dart';
-import 'package:landing_page/components/consequences.dart';
-import 'package:landing_page/components/faq.dart';
-import 'package:landing_page/components/header.dart';
-import 'package:landing_page/components/problem.dart';
-import 'package:landing_page/components/problem2.dart';
-import 'package:landing_page/components/motivacional_card.dart';
-import 'package:landing_page/components/packeges.dart';
-import 'package:landing_page/components/walkthrough.dart';
-import 'package:landing_page/components/web_app_bar.dart';
+import 'package:landing_page/sections/consequences/consequences.dart';
+import 'package:landing_page/sections/faq/faq.dart';
+import 'package:landing_page/sections/problem/problem.dart';
+import 'package:landing_page/sections/problem2/problem2.dart';
+import 'package:landing_page/sections/motivacional_card/motivacional_card.dart';
+import 'package:landing_page/sections/packages/packages.dart';
+import 'package:landing_page/sections/walkthrough/walkthrough.dart';
+import 'package:landing_page/sections/appbar/web_app_bar.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -31,7 +30,6 @@ class HomePage extends StatelessWidget {
           child: SingleChildScrollView(
             child: Column(
               children: [
-                // const Header(),
                 const Problem(),
                 const SizedBox(height: 30),
                 const Consequences(),
@@ -40,7 +38,7 @@ class HomePage extends StatelessWidget {
                 const SizedBox(height: 30),
                 const MotivacionalCard(),
                 const SizedBox(height: 30),
-                const Packeges(),
+                const Packages(),
                 const SizedBox(height: 30),
                 const Walkthrough(),
                 const SizedBox(height: 30),
