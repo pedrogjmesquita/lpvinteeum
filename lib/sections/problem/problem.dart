@@ -12,7 +12,7 @@ class Problem extends StatelessWidget {
       builder: (context, constraints) {
         return constraints.maxWidth > mobileBreakpoint
             ? Container(
-                height: 400, // Set the desired height here
+                // height: 400, // Set the desired height here
                 decoration: BoxDecoration(
                   image: DecorationImage(
                     fit: BoxFit.cover,
@@ -26,12 +26,14 @@ class Problem extends StatelessWidget {
                   color: Colors.black,
                 ),
 
-                child: Row(
+                child: const Row(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
-                      const MainProblem(),
-                      FormCard(constraints: constraints.maxWidth),
+                      MainProblem(
+                        isMobile: false,
+                      ),
+                      FormCard(isMobile: false),
                     ]),
               )
             : Container(
@@ -48,12 +50,12 @@ class Problem extends StatelessWidget {
                   ),
                   color: Colors.black,
                 ),
-                child: Column(
+                child: const Column(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
-                      const MainProblem(),
-                      FormCard(constraints: constraints.maxWidth),
+                      MainProblem(isMobile: true),
+                      FormCard(isMobile: true),
                     ]),
               );
       },

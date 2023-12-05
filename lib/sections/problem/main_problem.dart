@@ -3,11 +3,14 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:landing_page/constants/colors.dart';
 
 class MainProblem extends StatelessWidget {
-  const MainProblem({super.key});
+  const MainProblem({super.key, required this.isMobile});
+
+  final bool isMobile;
 
   @override
   Widget build(BuildContext context) {
     return Container(
+      margin: const EdgeInsets.all(30),
       constraints: const BoxConstraints(maxWidth: 300),
       child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
@@ -15,27 +18,21 @@ class MainProblem extends StatelessWidget {
           children: [
             Text.rich(
                 TextSpan(
-                  text: "Descubra as ferramentas necessárias\n",
+                  text: "Descubra as ferramentas necessárias para ",
                   children: [
-                    const TextSpan(
-                      text: "para ",
-                    ),
                     TextSpan(
                       text: "aumentar o lucro",
                       style: TextStyle(
-                        color: colors[4], // Change the color here
+                        color: colors[4],
                       ),
                     ),
                     const TextSpan(
-                      text: " da sua empresa\n",
-                    ),
-                    const TextSpan(
-                      text: "e se destacar no mercado!",
+                      text: " da sua empresa e se destacar no mercado!",
                     ),
                   ],
                 ),
                 style: GoogleFonts.rubik(
-                  fontSize: 35,
+                  fontSize: isMobile ? 25 : 35,
                   fontWeight: FontWeight.bold,
                   color: Colors.white,
                 )),
@@ -60,7 +57,7 @@ class MainProblem extends StatelessWidget {
                 ],
               ),
               style: GoogleFonts.rubik(
-                fontSize: 25,
+                fontSize: isMobile ? 20 : 25,
                 fontWeight: FontWeight.w500,
                 color: Colors.white,
               ),

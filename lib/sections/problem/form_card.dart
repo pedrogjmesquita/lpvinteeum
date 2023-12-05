@@ -3,9 +3,9 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:landing_page/constants/colors.dart';
 
 class FormCard extends StatelessWidget {
-  const FormCard({super.key, required this.constraints});
+  const FormCard({super.key, required this.isMobile});
 
-  final double constraints;
+  final bool isMobile;
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -14,7 +14,7 @@ class FormCard extends StatelessWidget {
         children: [
           Container(
               constraints: BoxConstraints(
-                maxWidth: (constraints / 3) > 200 ? (constraints / 3) : 200,
+                maxWidth: isMobile ? 300 : 400,
               ),
               padding: const EdgeInsets.all(30),
               child: Column(
@@ -24,17 +24,13 @@ class FormCard extends StatelessWidget {
                   Text(
                     'Preencha o nosso formulário para ver como nós podemos te ajudar!',
                     style: GoogleFonts.rubik(
-                      fontSize: 30,
+                      fontSize: isMobile ? 25 : 30,
                       color: Colors.white,
                     ),
                     textAlign: TextAlign.center,
                   ),
                   const SizedBox(height: 30),
-                  Container(
-                    constraints: BoxConstraints(
-                      maxWidth:
-                          (constraints / 3) > 200 ? (constraints / 3) : 200,
-                    ),
+                  SizedBox(
                     width: double.infinity,
                     child: ElevatedButton(
                       onPressed: () {},
