@@ -12,7 +12,11 @@ class ConsequencesImageCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       constraints: BoxConstraints(
-        maxWidth: (constraints / 3) > 250 ? constraints / 3 : 250,
+        maxWidth: (constraints / 3) > 250
+            ? (constraints / 3) < 400
+                ? constraints / 3
+                : 400
+            : 250,
       ),
       child: ClipRRect(
         borderRadius: BorderRadius.circular(30),

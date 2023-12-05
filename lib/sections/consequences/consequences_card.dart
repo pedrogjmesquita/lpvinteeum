@@ -55,17 +55,17 @@ class ConsequencesCard extends StatelessWidget {
                   const SizedBox(height: 30),
                   Text('- Tópico 1',
                       style: TextStyle(
-                          fontSize: 20,
+                          fontSize: 25,
                           color: Colors.white,
                           fontFamily: GoogleFonts.rubik().fontFamily)),
                   Text('- Tópico 2',
                       style: TextStyle(
-                          fontSize: 20,
+                          fontSize: 25,
                           color: Colors.white,
                           fontFamily: GoogleFonts.rubik().fontFamily)),
                   Text('- Tópico 3',
                       style: TextStyle(
-                          fontSize: 20,
+                          fontSize: 25,
                           color: Colors.white,
                           fontFamily: GoogleFonts.rubik().fontFamily)),
                 ],
