@@ -1,6 +1,15 @@
-class AssessementPackageTexts{
-  static const String title = "Pacote de Assessement";
-  static const String description = 'Formulário para entendermos melhor suas necessidades e te oferecermos a melhor solução';
+class AssessementPackageTexts {
+  static const String title = "IA Assessment";
+  static const String description =
+      'Ferramenta estratégica para identificação de oportunidades de potencialização do seu negocio com IA.';
   static const String price = 'R\$ 300,00';
-  static const List<String> features = ['Feature 1', 'Feature 2', 'Feature 3'];
+  static const String oldPrice = 'R\$ 500,00';
+  static const List<String> features = [
+    'Insights preciosos',
+    'Inteligência comercial',
+    'Entrega em 2 dias*'
+  ];
+  static const String button = 'Transforme meu negócio';
+  static const String disclaimer =
+      '*Dias úteis contados após o preenchimento do questionário';
 }

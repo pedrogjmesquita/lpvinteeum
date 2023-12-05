@@ -11,7 +11,14 @@ import 'package:landing_page/sections/walkthrough/walkthrough.dart';
 import 'package:landing_page/sections/appbar/web_app_bar.dart';
 
 class HomePage extends StatelessWidget {
-  const HomePage({super.key});
+  HomePage({super.key});
+
+  final GlobalKey assessemntKey = GlobalKey();
+
+  Future scrollToPackages() async {
+    await Scrollable.ensureVisible(assessemntKey.currentContext!,
+        duration: const Duration(milliseconds: 700));
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +29,7 @@ class HomePage extends StatelessWidget {
           decoration: BoxDecoration(
             // color: Colors.black,
             gradient: LinearGradient(
-              colors: colors.sublist(1,4),
+              colors: colors.sublist(1, 4),
               begin: Alignment.topLeft,
               end: Alignment.bottomRight,
             ),
@@ -31,7 +38,7 @@ class HomePage extends StatelessWidget {
           child: SingleChildScrollView(
             child: Column(
               children: [
-                const Problem(),
+                Problem(scrollToPackages: scrollToPackages),
                 const SizedBox(height: 30),
                 const Consequences(),
                 const SizedBox(height: 30),
@@ -39,7 +46,7 @@ class HomePage extends StatelessWidget {
                 const SizedBox(height: 30),
                 const MotivacionalCard(),
                 const SizedBox(height: 30),
-                const Packages(),
+                Packages(key: assessemntKey),
                 const SizedBox(height: 30),
                 const Walkthrough(),
                 const SizedBox(height: 30),

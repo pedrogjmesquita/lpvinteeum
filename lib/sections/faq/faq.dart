@@ -26,85 +26,35 @@ class FAQ extends StatelessWidget {
       }
 
       return Container(
-        margin: const EdgeInsets.symmetric(vertical: 30),
-        constraints: BoxConstraints(
-          maxWidth: maxDefinedWidth,
-        ),
-        child: Column(
-          children: [
-            Text(
-              FAQTexts().tittle,
-              style: GoogleFonts.rubik(
-                fontSize: isMobile ? 35 : 50,
-                fontWeight: FontWeight.bold,
-                color: Colors.white,
+          margin: const EdgeInsets.symmetric(vertical: 30),
+          constraints: BoxConstraints(
+            maxWidth: maxDefinedWidth,
+          ),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                FAQTexts.tittle,
+                style: GoogleFonts.rubik(
+                  fontSize: isMobile ? 30 : 35,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white,
+                ),
               ),
-              textAlign: TextAlign.center,
-            ),
-            const SizedBox(height: 30),
-            isMobile
-                ? Column(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Question(
-                          question: FAQTexts().question1,
-                          answer: FAQTexts().answer1),
-                      Question(
-                          question: FAQTexts().question2,
-                          answer: FAQTexts().answer2),
-                      Question(
-                          question: FAQTexts().question3,
-                          answer: FAQTexts().answer3),
-                      Question(
-                          question: FAQTexts().question4,
-                          answer: FAQTexts().answer4),
-                      Question(
-                          question: FAQTexts().question5,
-                          answer: FAQTexts().answer5),
-                      Question(
-                          question: FAQTexts().question6,
-                          answer: FAQTexts().answer6),
-                    ],
-                  )
-                : Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Column(
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Question(
-                              question: FAQTexts().question1,
-                              answer: FAQTexts().answer1),
-                          Question(
-                              question: FAQTexts().question2,
-                              answer: FAQTexts().answer2),
-                          Question(
-                              question: FAQTexts().question3,
-                              answer: FAQTexts().answer3),
-                        ],
-                      ),
-                      Column(
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Question(
-                              question: FAQTexts().question4,
-                              answer: FAQTexts().answer4),
-                          Question(
-                              question: FAQTexts().question5,
-                              answer: FAQTexts().answer5),
-                          Question(
-                              question: FAQTexts().question6,
-                              answer: FAQTexts().answer6),
-                        ],
-                      ),
-                    ],
-                  )
-          ],
-        ),
-      );
+              const SizedBox(height: 30),
+              Question(
+                  question: FAQTexts.question1,
+                  answer: FAQTexts.answer1,
+                  isMobile: isMobile),
+              const SizedBox(height: 30),
+              Question(
+                  question: FAQTexts.question2,
+                  answer: FAQTexts.answer2,
+                  isMobile: isMobile),
+              const SizedBox(height: 30),
+            ],
+          ));
     });
   }
 }

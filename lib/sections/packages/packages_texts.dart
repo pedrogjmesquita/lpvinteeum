@@ -1,6 +1,6 @@
-import 'package:lorem_ipsum/lorem_ipsum.dart';
-
-class PackagesText{
-  static const String title = 'Nossos Pacotes';
-  static  String subtitle = loremIpsum(words: 30);
+class PackagesText {
+  static const String titlePart1 = 'Chegou a hora de tomar decisões ';
+  static const String titlePart2 = '';
+  static const String titleEnphasis = 'inteligentes';
+  static String subtitle = '';
 }

@@ -3,9 +3,11 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:landing_page/constants/colors.dart';
 
 class FormCard extends StatelessWidget {
-  const FormCard({super.key, required this.isMobile});
+  const FormCard({super.key, required this.isMobile, required this.scrollToPackages});
 
   final bool isMobile;
+  final VoidCallback scrollToPackages;
+
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -56,7 +58,7 @@ class FormCard extends StatelessWidget {
                     padding: const EdgeInsets.symmetric(vertical: 10),
                     constraints: const BoxConstraints(minHeight: 100),
                     child: ElevatedButton(
-                      onPressed: () {},
+                      onPressed: scrollToPackages,
                       style: ElevatedButton.styleFrom(
                         backgroundColor: colors[0],
                         shape: RoundedRectangleBorder(

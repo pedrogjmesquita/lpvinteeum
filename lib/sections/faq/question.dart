@@ -6,10 +6,12 @@ class Question extends StatelessWidget {
     super.key,
     required this.question,
     required this.answer,
+    required this.isMobile,
   });
 
   final String question;
   final String answer;
+  final bool isMobile;
 
   @override
   Widget build(BuildContext context) {
@@ -21,16 +23,17 @@ class Question extends StatelessWidget {
           Text(
             question,
             style: GoogleFonts.rubik(
-              fontSize: 25,
+              fontSize: isMobile ? 20 : 25,
               fontWeight: FontWeight.bold,
               color: Colors.white,
             ),
             textAlign: TextAlign.left,
           ),
+          const SizedBox(height: 10),
           Text(
-            answer,
+            '\t\t\t$answer',
             style: GoogleFonts.rubik(
-              fontSize: 20,
+              fontSize: isMobile ? 15 : 20,
               color: Colors.white,
             ),
             textAlign: TextAlign.left,

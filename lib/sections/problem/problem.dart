@@ -4,7 +4,12 @@ import 'package:landing_page/sections/problem/form_card.dart';
 import 'package:landing_page/sections/problem/main_problem.dart';
 
 class Problem extends StatelessWidget {
-  const Problem({super.key});
+  final VoidCallback scrollToPackages;
+
+  const Problem({
+    super.key,
+    required this.scrollToPackages,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -24,14 +29,15 @@ class Problem extends StatelessWidget {
                   ),
                   color: Colors.black,
                 ),
-                child: const Row(
+                child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
-                      MainProblem(
+                      const MainProblem(
                         isMobile: false,
                       ),
-                      FormCard(isMobile: false),
+                      FormCard(
+                          isMobile: false, scrollToPackages: scrollToPackages),
                     ]),
               )
             : Container(
@@ -48,12 +54,13 @@ class Problem extends StatelessWidget {
                   ),
                   color: Colors.black,
                 ),
-                child: const Column(
+                child: Column(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
-                      MainProblem(isMobile: true),
-                      FormCard(isMobile: true),
+                      const MainProblem(isMobile: true),
+                      FormCard(
+                          isMobile: true, scrollToPackages: scrollToPackages),
                     ]),
               );
       },

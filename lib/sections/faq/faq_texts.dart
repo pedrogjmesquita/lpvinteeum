@@ -1,17 +1,17 @@
-import 'package:lorem_ipsum/lorem_ipsum.dart';
-
 class FAQTexts {
-  final String tittle = "Perguntas Frequentes";
-  final String question1 = "Pergunta 1";
-  final String answer1 = loremIpsum(words: 15);
-  final String question2 = "Pergunta 2";
-  final String answer2 = loremIpsum(words: 15);
-  final String question3 = "Pergunta 3";
-  final String answer3 = loremIpsum(words: 15);
-  final String question4 = "Pergunta 4";
-  final String answer4 = loremIpsum(words: 15);
-  final String question5 = "Pergunta 5";
-  final String answer5 = loremIpsum(words: 15);
-  final String question6 = "Pergunta 6";
-  final String answer6 = loremIpsum(words: 15);
+  static const String tittle = "Perguntas Frequentes";
+  static const String question1 = "Quais são as formas de pagamento?";
+  static const String answer1 =
+      'Aceitamos PIX, cartão de crédito e boleto bancário.';
+  static const String question2 = "Por onde é feito o pagamento?";
+  static const String answer2 =
+      'A plataforma responsável pelo pagamento é a PerfectPay.                                    ';
+  static const String question3 = "Pergunta 3";
+  static const String answer3 = '<><><><><><><><><><><>';
+  static const String question4 = "Pergunta 4";
+  static const String answer4 = '<><><><><><><><><><><>';
+  static const String question5 = "Pergunta 5";
+  static const String answer5 = '<><><><><><><><><><><>';
+  static const String question6 = "Pergunta 6";
+  static const String answer6 = '<><><><><><><><><><><>';
 }

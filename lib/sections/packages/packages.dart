@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:landing_page/constants/breakpoints.dart';
+import 'package:landing_page/constants/colors.dart';
+import 'package:landing_page/sections/consequences/highlighted_texts.dart';
 import 'package:landing_page/sections/packages/assessement_package_texts.dart';
 import 'package:landing_page/sections/packages/package.dart';
 import 'package:landing_page/sections/packages/packages_texts.dart';
@@ -25,12 +27,13 @@ class Packages extends StatelessWidget {
           child: constraints.maxWidth > mobileBreakpoint
               ? Column(
                   children: [
-                    Text(PackagesText.title,
-                        style: GoogleFonts.rubik(
-                          fontSize: 35,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.white,
-                        )),
+                    HighlightedTexts(
+                        textPart1: PackagesText.titlePart1,
+                        textPart2: PackagesText.titlePart2,
+                        textEnphasis1: PackagesText.titleEnphasis,
+                        color: colors[6],
+                        fontSize: 35,
+                        textAlign: TextAlign.center),
                     const SizedBox(height: 30),
                     Text(PackagesText.subtitle,
                         style: GoogleFonts.rubik(
@@ -40,8 +43,10 @@ class Packages extends StatelessWidget {
                         tittle: AssessementPackageTexts.title,
                         text: AssessementPackageTexts.description,
                         price: AssessementPackageTexts.price,
+                        oldPrice: AssessementPackageTexts.oldPrice,
                         features: AssessementPackageTexts.features,
-                        width: 290,
+                        button: AssessementPackageTexts.button,
+                        width: 300,
                         isMobile: false),
                   ],
                 )
@@ -50,12 +55,13 @@ class Packages extends StatelessWidget {
               //#########
               : Column(
                   children: [
-                    Text(PackagesText.title,
-                        style: GoogleFonts.rubik(
-                          fontSize: 30,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.white,
-                        )),
+                    HighlightedTexts(
+                        textPart1: PackagesText.titlePart1,
+                        textPart2: PackagesText.titlePart2,
+                        textEnphasis1: PackagesText.titleEnphasis,
+                        color: colors[6],
+                        fontSize: 30,
+                        textAlign: TextAlign.center),
                     const SizedBox(height: 30),
                     Text(PackagesText.subtitle,
                         style: GoogleFonts.rubik(
@@ -65,8 +71,10 @@ class Packages extends StatelessWidget {
                         tittle: AssessementPackageTexts.title,
                         text: AssessementPackageTexts.description,
                         price: AssessementPackageTexts.price,
+                        oldPrice: AssessementPackageTexts.oldPrice,
                         features: AssessementPackageTexts.features,
-                        width: 290,
+                        button: AssessementPackageTexts.button,
+                        width: 300,
                         isMobile: false),
                   ],
                 ));
