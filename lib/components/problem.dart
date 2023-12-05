@@ -17,13 +17,27 @@ class Problem extends StatelessWidget {
                 : 300);
 
         return Container(
-          margin: const EdgeInsets.symmetric(vertical: 30),
-          constraints: BoxConstraints(
-            maxWidth: maxDefinedWidth,
+          height: 400, // Set the desired height here
+          decoration:  BoxDecoration(
+            image: DecorationImage(
+              fit: BoxFit.cover,
+              image: const AssetImage('web/assets/images/background.jpg'),
+              alignment: Alignment.bottomCenter,
+              colorFilter: ColorFilter.mode(Colors.black.withOpacity(0.25),
+                BlendMode.dstATop,
+            ),
+            ),
           ),
+         
+          
+      
           child:
-              Row(mainAxisAlignment: MainAxisAlignment.spaceAround, children: [
-            Column(children: [
+            Row(mainAxisAlignment: MainAxisAlignment.spaceAround,
+            crossAxisAlignment: CrossAxisAlignment.center, children: [
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
               Text('Problema',
                   style: GoogleFonts.rubik(
                     fontSize: 50,
@@ -40,6 +54,8 @@ class Problem extends StatelessWidget {
                   ))
             ]),
             Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Container(
                   constraints: BoxConstraints(
@@ -47,7 +63,9 @@ class Problem extends StatelessWidget {
                   ),
                   padding: const EdgeInsets.all(30),
                   child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.stretch,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    // crossAxisAlignment: CrossAxisAlignment.stretch,
                     children: [
                       Text(
                           'Preencha o nosso formulário para ver como nós podemos te ajudar!',

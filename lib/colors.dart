@@ -8,4 +8,5 @@ const colors = [
   Color.fromRGBO(40,108,108,1),
   Color.fromRGBO(40,132,120,1),
   Color.fromRGBO(40,156,132,1),
+  Color.fromRGBO(216,228,228,1)
 ];
