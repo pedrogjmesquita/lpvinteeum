@@ -40,7 +40,11 @@ class FormCard extends StatelessWidget {
                           borderRadius: BorderRadius.circular(30),
                         ),
                       ),
-                      child: const Text('Formulário'),
+                      child: Text('Formulário',
+                          style: GoogleFonts.rubik(
+                            fontSize: isMobile ? 25 : 30,
+                            color: Colors.white,
+                          )),
                     ),
                   ),
                 ],

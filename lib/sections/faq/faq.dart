@@ -30,14 +30,16 @@ class FAQ extends StatelessWidget {
           maxWidth: maxDefinedWidth,
         ),
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
           children: [
-            Text('Perguntas Frequentes',
-                style: GoogleFonts.rubik(
-                  fontSize: isMobile ? 35 : 50,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.white,
-                )),
+            Text(
+              'Perguntas Frequentes',
+              style: GoogleFonts.rubik(
+                fontSize: isMobile ? 35 : 50,
+                fontWeight: FontWeight.bold,
+                color: Colors.white,
+              ),
+              textAlign: TextAlign.center,
+            ),
             const SizedBox(height: 30),
             isMobile
                 ? const Column(

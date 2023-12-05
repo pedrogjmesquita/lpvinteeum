@@ -16,18 +16,25 @@ class Question extends StatelessWidget {
     return Container(
       margin: const EdgeInsets.symmetric(vertical: 10, horizontal: 30),
       child: Column(
+        mainAxisAlignment: MainAxisAlignment.start,
         children: [
-          Text(question,
-              style: GoogleFonts.rubik(
-                fontSize: 25,
-                fontWeight: FontWeight.bold,
-                color: Colors.white,
-              )),
-          Text(answer,
-              style: GoogleFonts.rubik(
-                fontSize: 20,
-                color: Colors.white,
-              )),
+          Text(
+            question,
+            style: GoogleFonts.rubik(
+              fontSize: 25,
+              fontWeight: FontWeight.bold,
+              color: Colors.white,
+            ),
+            textAlign: TextAlign.left,
+          ),
+          Text(
+            answer,
+            style: GoogleFonts.rubik(
+              fontSize: 20,
+              color: Colors.white,
+            ),
+            textAlign: TextAlign.left,
+          ),
         ],
       ),
     );
