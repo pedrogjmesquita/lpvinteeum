@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_carousel_widget/flutter_carousel_widget.dart';
 import 'package:landing_page/sections/problem2/problems.dart';
-import 'package:lorem_ipsum/lorem_ipsum.dart';
 
 class ProblemCarousel extends StatelessWidget {
   const ProblemCarousel({super.key, required this.isMobile});
@@ -12,29 +11,27 @@ class ProblemCarousel extends StatelessWidget {
     return FlutterCarousel(
         items: [
           Problems(
-            tittle: 'Problema 1',
-            text: loremIpsum(paragraphs: 1, words: 50),
+            tittle: 'Revelação de Oportunidades',
+            text:
+                'Identificação clara de áreas onde a implementação de IA pode gerar impacto imediato, impulsionando a eficiência e os resultados das estratégias de vendas.',
             isMobile: isMobile,
           ),
           Problems(
-            tittle: 'Problema 2',
-            text: loremIpsum(paragraphs: 1, words: 50),
+            tittle: 'Geração de Relatório Executivo',
+            text:
+                'Criação de um "one page report" revisado por executivo, condensando os insights e apontando as ações prioritárias.',
             isMobile: isMobile,
           ),
           Problems(
-            tittle: 'Problema 3',
-            text: loremIpsum(paragraphs: 1, words: 50),
-            isMobile: isMobile,
-          ),
-          Problems(
-            tittle: 'Problema 4',
-            text: loremIpsum(paragraphs: 1, words: 50),
+            tittle: 'Retorno em Curto Prazo',
+            text:
+                "Entrega dos resultados em apenas 2 dias úteis, permitindo uma rápida implementação das estratégias recomendadas",
             isMobile: isMobile,
           ),
         ],
         options: CarouselOptions(
           enableInfiniteScroll: true,
-          height: isMobile ? 500 : 400,
+          height: isMobile ? 350 : 300,
           autoPlay: true,
           autoPlayInterval: const Duration(seconds: 10),
           autoPlayAnimationDuration: const Duration(milliseconds: 800),

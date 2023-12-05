@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:landing_page/constants/breakpoints.dart';
+import 'package:landing_page/sections/packages/assessement_package_texts.dart';
 import 'package:landing_page/sections/packages/package.dart';
+import 'package:landing_page/sections/packages/packages_texts.dart';
 
 class Packages extends StatelessWidget {
   const Packages({super.key});
@@ -23,30 +25,22 @@ class Packages extends StatelessWidget {
           child: constraints.maxWidth > mobileBreakpoint
               ? Column(
                   children: [
-                    Text('Nossos pacotes',
+                    Text(PackagesText.title,
                         style: GoogleFonts.rubik(
-                          fontSize: 50,
+                          fontSize: 35,
                           fontWeight: FontWeight.bold,
                           color: Colors.white,
                         )),
                     const SizedBox(height: 30),
-                    Container(
-                      // constraints: BoxConstraints(
-                      //   maxWidth: maxDefinedWidth / 1.5,
-                      // ),
-                      child: Text(
-                          'Nossos planos - Essencial, Avançado e Elite - são meticulosamente estruturados para'
-                          'atender às necessidades de cada cliente, assegurando soluções personalizadas, inovação'
-                          'constante e resultados excepcionais em cada etapa do caminho',
-                          style: GoogleFonts.rubik(
-                              fontSize: 20, color: Colors.white),
-                          textAlign: TextAlign.center),
-                    ),
+                    Text(PackagesText.subtitle,
+                        style: GoogleFonts.rubik(
+                            fontSize: 20, color: Colors.white),
+                        textAlign: TextAlign.center),
                     const Package(
-                        tittle: 'Formulário de Assessement',
-                        text: 'Descrição do Produto',
-                        price: 'R\$ <preço> / mês*',
-                        features: ['Feature 1', 'Feature 2', 'Feature 3'],
+                        tittle: AssessementPackageTexts.title,
+                        text: AssessementPackageTexts.description,
+                        price: AssessementPackageTexts.price,
+                        features: AssessementPackageTexts.features,
                         width: 290,
                         isMobile: false),
                   ],
@@ -56,32 +50,24 @@ class Packages extends StatelessWidget {
               //#########
               : Column(
                   children: [
-                    Text('Nossos pacotes',
+                    Text(PackagesText.title,
                         style: GoogleFonts.rubik(
-                          fontSize: 35,
+                          fontSize: 30,
                           fontWeight: FontWeight.bold,
                           color: Colors.white,
                         )),
                     const SizedBox(height: 30),
-                    Container(
-                      // constraints: BoxConstraints(
-                      //   maxWidth: maxDefinedWidth / 1.5,
-                      // ),
-                      child: Text(
-                          'Nossos planos - Essencial, Avançado e Elite - são meticulosamente estruturados para'
-                          'atender às necessidades de cada cliente, assegurando soluções personalizadas, inovação'
-                          'constante e resultados excepcionais em cada etapa do caminho',
-                          style: GoogleFonts.rubik(
-                              fontSize: 20, color: Colors.white),
-                          textAlign: TextAlign.center),
-                    ),
+                    Text(PackagesText.subtitle,
+                        style: GoogleFonts.rubik(
+                            fontSize: 20, color: Colors.white),
+                        textAlign: TextAlign.center),
                     const Package(
-                        tittle: 'Formulário de Assessement',
-                        text: 'Descrição do Produto',
-                        price: 'R\$ <preço> / mês*',
-                        features: ['Feature 1', 'Feature 2', 'Feature 3'],
+                        tittle: AssessementPackageTexts.title,
+                        text: AssessementPackageTexts.description,
+                        price: AssessementPackageTexts.price,
+                        features: AssessementPackageTexts.features,
                         width: 290,
-                        isMobile: true),
+                        isMobile: false),
                   ],
                 ));
     });

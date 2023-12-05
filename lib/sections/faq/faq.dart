@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:landing_page/constants/breakpoints.dart';
+import 'package:landing_page/sections/faq/faq_texts.dart';
 import 'package:landing_page/sections/faq/question.dart';
 
 class FAQ extends StatelessWidget {
@@ -32,7 +33,7 @@ class FAQ extends StatelessWidget {
         child: Column(
           children: [
             Text(
-              'Perguntas Frequentes',
+              FAQTexts().tittle,
               style: GoogleFonts.rubik(
                 fontSize: isMobile ? 35 : 50,
                 fontWeight: FontWeight.bold,
@@ -42,19 +43,31 @@ class FAQ extends StatelessWidget {
             ),
             const SizedBox(height: 30),
             isMobile
-                ? const Column(
+                ? Column(
                     mainAxisAlignment: MainAxisAlignment.start,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Question(question: 'Pergunta 1', answer: 'Resposta 1'),
-                      Question(question: 'Pergunta 2', answer: 'Resposta 2'),
-                      Question(question: 'Pergunta 3', answer: 'Resposta 3'),
-                      Question(question: 'Pergunta 4', answer: 'Resposta 4'),
-                      Question(question: 'Pergunta 5', answer: 'Resposta 5'),
-                      Question(question: 'Pergunta 6', answer: 'Resposta 6'),
+                      Question(
+                          question: FAQTexts().question1,
+                          answer: FAQTexts().answer1),
+                      Question(
+                          question: FAQTexts().question2,
+                          answer: FAQTexts().answer2),
+                      Question(
+                          question: FAQTexts().question3,
+                          answer: FAQTexts().answer3),
+                      Question(
+                          question: FAQTexts().question4,
+                          answer: FAQTexts().answer4),
+                      Question(
+                          question: FAQTexts().question5,
+                          answer: FAQTexts().answer5),
+                      Question(
+                          question: FAQTexts().question6,
+                          answer: FAQTexts().answer6),
                     ],
                   )
-                : const Row(
+                : Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Column(
@@ -62,11 +75,14 @@ class FAQ extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Question(
-                              question: 'Pergunta 1', answer: 'Resposta 1'),
+                              question: FAQTexts().question1,
+                              answer: FAQTexts().answer1),
                           Question(
-                              question: 'Pergunta 2', answer: 'Resposta 2'),
+                              question: FAQTexts().question2,
+                              answer: FAQTexts().answer2),
                           Question(
-                              question: 'Pergunta 3', answer: 'Resposta 3'),
+                              question: FAQTexts().question3,
+                              answer: FAQTexts().answer3),
                         ],
                       ),
                       Column(
@@ -74,11 +90,14 @@ class FAQ extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Question(
-                              question: 'Pergunta 4', answer: 'Resposta 4'),
+                              question: FAQTexts().question4,
+                              answer: FAQTexts().answer4),
                           Question(
-                              question: 'Pergunta 5', answer: 'Resposta 5'),
+                              question: FAQTexts().question5,
+                              answer: FAQTexts().answer5),
                           Question(
-                              question: 'Pergunta 6', answer: 'Resposta 6'),
+                              question: FAQTexts().question6,
+                              answer: FAQTexts().answer6),
                         ],
                       ),
                     ],

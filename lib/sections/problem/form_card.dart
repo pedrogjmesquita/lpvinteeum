@@ -14,24 +14,47 @@ class FormCard extends StatelessWidget {
         children: [
           Container(
               constraints: BoxConstraints(
-                maxWidth: isMobile ? 300 : 400,
+                maxWidth: isMobile ? 300 : 350,
               ),
               padding: const EdgeInsets.all(30),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Text(
-                    'Preencha o nosso formulário para ver como nós podemos te ajudar!',
+                  Text.rich(
+                    TextSpan(
+                      text: "Faça parte da ",
+                      children: [
+                        TextSpan(
+                          text: "revolução",
+                          style: TextStyle(
+                            color: colors[4], // Change the color here
+                          ),
+                        ),
+                        const TextSpan(
+                          text: " e reserve seu ",
+                          style: TextStyle(color: Colors.white),
+                        ),
+                        TextSpan(
+                          text: "assessment ",
+                          style: TextStyle(
+                            color: colors[4], // Change the color here
+                          ),
+                        ),
+                      ],
+                    ),
                     style: GoogleFonts.rubik(
                       fontSize: isMobile ? 25 : 30,
+                      fontWeight: FontWeight.w400,
                       color: Colors.white,
                     ),
                     textAlign: TextAlign.center,
                   ),
                   const SizedBox(height: 30),
-                  SizedBox(
+                  Container(
                     width: double.infinity,
+                    padding: const EdgeInsets.symmetric(vertical: 10),
+                    constraints: const BoxConstraints(minHeight: 100),
                     child: ElevatedButton(
                       onPressed: () {},
                       style: ElevatedButton.styleFrom(
@@ -40,11 +63,14 @@ class FormCard extends StatelessWidget {
                           borderRadius: BorderRadius.circular(30),
                         ),
                       ),
-                      child: Text('Formulário',
-                          style: GoogleFonts.rubik(
-                            fontSize: isMobile ? 25 : 30,
-                            color: Colors.white,
-                          )),
+                      child: Text(
+                        'Quero fazer parte da revolução',
+                        style: GoogleFonts.rubik(
+                          fontSize: isMobile ? 22 : 27,
+                          color: Colors.white,
+                        ),
+                        textAlign: TextAlign.center,
+                      ),
                     ),
                   ),
                 ],

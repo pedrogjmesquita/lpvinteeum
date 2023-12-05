@@ -22,7 +22,7 @@ class Package extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final String finalFeatures = features.join('\n\n✅');
-    final List<double> font_sizes =
+    final List<double> fontSizes =
         isMobile ? [20, 15, 20, 15] : [25, 20, 25, 20];
 
     return Container(
@@ -37,7 +37,7 @@ class Package extends StatelessWidget {
         children: [
           Text(tittle,
               style: GoogleFonts.rubik(
-                fontSize: font_sizes[0],
+                fontSize: fontSizes[0],
                 color: colors[0],
                 fontWeight: FontWeight.bold,
               ),
@@ -45,14 +45,14 @@ class Package extends StatelessWidget {
           const SizedBox(height: 10),
           Text(text,
               style: GoogleFonts.rubik(
-                fontSize: font_sizes[1],
+                fontSize: fontSizes[1],
                 color: colors[0],
               ),
               textAlign: TextAlign.center),
           const SizedBox(height: 20),
           Text(price,
               style: GoogleFonts.rubik(
-                fontSize: font_sizes[2],
+                fontSize: fontSizes[2],
                 color: colors[0],
                 fontWeight: FontWeight.bold,
               )),
@@ -60,7 +60,7 @@ class Package extends StatelessWidget {
           Text('✅$finalFeatures',
               textAlign: TextAlign.left,
               style:
-                  GoogleFonts.rubik(fontSize: font_sizes[3], color: colors[0])),
+                  GoogleFonts.rubik(fontSize: fontSizes[3], color: colors[0])),
           const SizedBox(height: 30),
           ElevatedButton(
               onPressed: () => {},

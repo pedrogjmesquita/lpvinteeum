@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:landing_page/constants/colors.dart';
 
 class Problems extends StatelessWidget {
   const Problems(
@@ -18,8 +19,8 @@ class Problems extends StatelessWidget {
       children: [
         Text(tittle,
             style: GoogleFonts.rubik(
-              fontSize: isMobile ? 30 : 45,
-              color: Colors.white,
+              fontSize: isMobile ? 30 : 35,
+              color: colors[6],
             )),
         const SizedBox(height: 30),
         Text(text,

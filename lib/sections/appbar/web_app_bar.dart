@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:landing_page/constants/colors.dart';
+import 'package:landing_page/sections/appbar/app_bar_texts.dart';
 
 class WebAppBar extends StatelessWidget {
   const WebAppBar({super.key});
@@ -18,11 +19,11 @@ class WebAppBar extends StatelessWidget {
           child: Row(
             children: [
               SizedBox(
-                width: 100, // Set the desired width
-                height: 100, // Set the desired height
+                width: 100,
+                height: 100,
                 child: Image.asset('web/assets/images/vinte_e_um_logo.png'),
               ),
-              Text('21.AI',
+              Text(AppBarTexts.title,
                   style: GoogleFonts.rubik(
                     fontSize: 30,
                     fontWeight: FontWeight.bold,

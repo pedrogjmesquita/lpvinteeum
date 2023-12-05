@@ -12,7 +12,6 @@ class Problem extends StatelessWidget {
       builder: (context, constraints) {
         return constraints.maxWidth > mobileBreakpoint
             ? Container(
-                // height: 400, // Set the desired height here
                 decoration: BoxDecoration(
                   image: DecorationImage(
                     fit: BoxFit.cover,
@@ -25,9 +24,8 @@ class Problem extends StatelessWidget {
                   ),
                   color: Colors.black,
                 ),
-
                 child: const Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       MainProblem(

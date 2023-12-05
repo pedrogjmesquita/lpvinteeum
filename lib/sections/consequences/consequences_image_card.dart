@@ -14,7 +14,7 @@ class ConsequencesImageCard extends StatelessWidget {
       constraints: BoxConstraints(
         maxWidth: (constraints / 3) > 250
             ? (constraints / 3) < 400
-                ? constraints / 3
+                ? constraints / 3.3
                 : 400
             : 250,
       ),

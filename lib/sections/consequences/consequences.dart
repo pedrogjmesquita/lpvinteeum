@@ -25,14 +25,20 @@ class Consequences extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
                       ConsequencesImageCard(constraints: constraints.maxWidth),
-                      ConsequencesCard(constraints: constraints.maxWidth),
+                      ConsequencesCard(
+                        constraints: constraints.maxWidth,
+                        isMobile: false,
+                      ),
                     ])
               : Column(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                       ConsequencesImageCard(constraints: constraints.maxWidth),
-                      ConsequencesCard(constraints: constraints.maxWidth),
+                      ConsequencesCard(
+                        constraints: constraints.maxWidth,
+                        isMobile: true,
+                      ),
                     ]));
     });
   }

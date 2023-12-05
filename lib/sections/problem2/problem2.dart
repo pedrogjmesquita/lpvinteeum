@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:landing_page/constants/breakpoints.dart';
+import 'package:landing_page/constants/colors.dart';
+import 'package:landing_page/sections/consequences/highlighted_texts.dart';
+import 'package:landing_page/sections/problem2/problem2_texts.dart';
 import 'package:landing_page/sections/problem2/problem_carousel.dart';
 
 class Problem2 extends StatelessWidget {
@@ -23,13 +25,14 @@ class Problem2 extends StatelessWidget {
           child: constraints.maxWidth > mobileBreakpoint
               ? Row(children: [
                   Expanded(
-                      child: Text('Problema\nAmplificado',
-                          style: GoogleFonts.rubik(
-                            fontSize: 50,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white,
-                          ),
-                          textAlign: TextAlign.center)),
+                      child: HighlightedTexts(
+                    textPart1: Problem2Texts.descriptionPart1,
+                    textPart2: Problem2Texts.descriptionPart2,
+                    textPart3: Problem2Texts.descriptionPart3,
+                    textEnphasis1: Problem2Texts.descriptionEnphasis1,
+                    textEnphasis2: Problem2Texts.descriptionEnphasis2,
+                    color: colors[6],
+                  )),
                   const Expanded(
                       child: ProblemCarousel(
                     isMobile: false,
@@ -37,14 +40,16 @@ class Problem2 extends StatelessWidget {
                 ])
               : Column(
                   children: [
-                    Text('Problema\nAmplificado',
-                        style: GoogleFonts.rubik(
-                          fontSize: 35,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.white,
-                        ),
-                        textAlign: TextAlign.center),
-                    const SizedBox(height: 30),
+                    HighlightedTexts(
+                      textPart1: Problem2Texts.descriptionPart1,
+                      textPart2: Problem2Texts.descriptionPart2,
+                      textPart3: Problem2Texts.descriptionPart3,
+                      textEnphasis1: Problem2Texts.descriptionEnphasis1,
+                      textEnphasis2: Problem2Texts.descriptionEnphasis2,
+                      color: colors[6],
+                      fontSize: 22,
+                    ),
+                    const SizedBox(height: 50),
                     const ProblemCarousel(
                       isMobile: true,
                     ),
