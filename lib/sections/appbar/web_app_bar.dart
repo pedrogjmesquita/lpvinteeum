@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:landing_page/colors.dart';
+import 'package:landing_page/constants/colors.dart';
 
 class WebAppBar extends StatelessWidget {
   const WebAppBar({super.key});

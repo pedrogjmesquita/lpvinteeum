@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:landing_page/breakpoints.dart';
+import 'package:landing_page/constants/breakpoints.dart';
 import 'package:landing_page/sections/problem2/problem_carousel.dart';
 
 class Problem2 extends StatelessWidget {

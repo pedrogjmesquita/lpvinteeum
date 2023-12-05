@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:landing_page/colors.dart';
+import 'package:landing_page/constants/colors.dart';
 
 class Package extends StatelessWidget {
   const Package(
@@ -9,17 +9,22 @@ class Package extends StatelessWidget {
       required this.text,
       required this.price,
       required this.features,
-      required this.width});
+      required this.width,
+      required this.isMobile});
 
   final String text;
   final String tittle;
   final String price;
   final List<String> features;
   final double width;
+  final bool isMobile;
 
   @override
   Widget build(BuildContext context) {
     final String finalFeatures = features.join('\n\n✅');
+    final List<double> font_sizes =
+        isMobile ? [20, 15, 20, 15] : [25, 20, 25, 20];
+
     return Container(
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(30),
@@ -32,7 +37,7 @@ class Package extends StatelessWidget {
         children: [
           Text(tittle,
               style: GoogleFonts.rubik(
-                fontSize: 25,
+                fontSize: font_sizes[0],
                 color: colors[0],
                 fontWeight: FontWeight.bold,
               ),
@@ -40,21 +45,22 @@ class Package extends StatelessWidget {
           const SizedBox(height: 10),
           Text(text,
               style: GoogleFonts.rubik(
-                fontSize: 20,
+                fontSize: font_sizes[1],
                 color: colors[0],
               ),
               textAlign: TextAlign.center),
           const SizedBox(height: 20),
           Text(price,
               style: GoogleFonts.rubik(
-                fontSize: 25,
+                fontSize: font_sizes[2],
                 color: colors[0],
                 fontWeight: FontWeight.bold,
               )),
           const SizedBox(height: 20),
           Text('✅$finalFeatures',
               textAlign: TextAlign.left,
-              style: GoogleFonts.rubik(fontSize: 15, color: colors[0])),
+              style:
+                  GoogleFonts.rubik(fontSize: font_sizes[3], color: colors[0])),
           const SizedBox(height: 30),
           ElevatedButton(
               onPressed: () => {},

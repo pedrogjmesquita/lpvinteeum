@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:landing_page/breakpoints.dart';
+import 'package:landing_page/constants/breakpoints.dart';
 
 class Walkthrough extends StatelessWidget {
   const Walkthrough({super.key});

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:landing_page/breakpoints.dart';
+import 'package:landing_page/constants/breakpoints.dart';
 import 'package:landing_page/sections/consequences/consequences_card.dart';
 import 'package:landing_page/sections/consequences/consequences_image_card.dart';
 

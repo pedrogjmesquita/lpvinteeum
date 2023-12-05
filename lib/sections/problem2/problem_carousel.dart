@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_carousel_widget/flutter_carousel_widget.dart';
-import 'package:landing_page/subcomponents/problems.dart';
+import 'package:landing_page/sections/problem2/problems.dart';
 import 'package:lorem_ipsum/lorem_ipsum.dart';
 
 class ProblemCarousel extends StatelessWidget {

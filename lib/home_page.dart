@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:landing_page/colors.dart';
+import 'package:landing_page/constants/colors.dart';
 import 'package:landing_page/sections/consequences/consequences.dart';
 import 'package:landing_page/sections/faq/faq.dart';
 import 'package:landing_page/sections/problem/problem.dart';
