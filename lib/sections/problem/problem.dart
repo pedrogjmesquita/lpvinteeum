@@ -34,7 +34,6 @@ class Problem extends StatelessWidget {
                     ]),
               )
             : Container(
-                // height: 400, // Set the desired height here
                 width: double.infinity,
                 decoration: BoxDecoration(
                   image: DecorationImage(
