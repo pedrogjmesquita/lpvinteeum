@@ -11,13 +11,13 @@ class WalktrhoughTexts {
 
   static const String title2 = "2. Responda às Perguntas";
   static const String topic2item1 =
-      ". Responda os campos indicados detalhadamente para revelar oportunidades exclusivas.";
+      "∙ Responda os campos indicados detalhadamente para revelar oportunidades exclusivas.";
   static const String topic2item2 =
       "∙ Não poupe detalhes, quanto mais detalhadas as respostas, mais completos serão seus resultados.";
 
   static const String title3 = "3. Receba Seu Relatório Personalizado";
   static const String topic3item1 =
-      ". Em até 2 dias úteis, você receberá um relatório conciso, e detalhado, condensando informações vitais e destacando ações prioritárias.";
+      "∙ Em até 2 dias úteis, você receberá um relatório conciso, e detalhado, condensando informações vitais e destacando ações prioritárias.";
   static const String topic3item2 =
       "∙ Cada relatório é personalizado para atender às nuances do seu negócio, fornecendo insights precisos e orientações estratégicas direcionadas.";
 }

@@ -37,11 +37,11 @@ class ConsequencesCard extends StatelessWidget {
                     textEnphasis1: ConsequencesTexts.topic1enphasis,
                     color: colors[6],
                   ),
-                  const SizedBox(height: 20),
+                  const SizedBox(height: 40),
                   HighlightedTexts(
                     textPart1: ConsequencesTexts.topic2part1,
                     textPart2: ConsequencesTexts.topic2part2,
-                    textPart3: ConsequencesTexts.topic2part2,
+                    textPart3: ConsequencesTexts.topic2part3,
                     textEnphasis1: ConsequencesTexts.topic2enphasis1,
                     textEnphasis2: ConsequencesTexts.topic2enphasis2,
                     color: colors[6],
@@ -50,7 +50,7 @@ class ConsequencesCard extends StatelessWidget {
                   HighlightedTexts(
                     textPart1: ConsequencesTexts.topic3part1,
                     textPart2: ConsequencesTexts.topic3part2,
-                    textPart3: ConsequencesTexts.topic3part2,
+                    textPart3: ConsequencesTexts.topic3part3,
                     textEnphasis1: ConsequencesTexts.topic3enphasis1,
                     textEnphasis2: ConsequencesTexts.topic3enphasis2,
                     color: colors[6],
@@ -79,7 +79,7 @@ class ConsequencesCard extends StatelessWidget {
                   HighlightedTexts(
                     textPart1: ConsequencesTexts.topic2part1,
                     textPart2: ConsequencesTexts.topic2part2,
-                    textPart3: ConsequencesTexts.topic2part2,
+                    textPart3: ConsequencesTexts.topic2part3,
                     textEnphasis1: ConsequencesTexts.topic2enphasis1,
                     textEnphasis2: ConsequencesTexts.topic2enphasis2,
                     color: colors[6],
@@ -89,7 +89,7 @@ class ConsequencesCard extends StatelessWidget {
                   HighlightedTexts(
                     textPart1: ConsequencesTexts.topic3part1,
                     textPart2: ConsequencesTexts.topic3part2,
-                    textPart3: ConsequencesTexts.topic3part2,
+                    textPart3: ConsequencesTexts.topic3part3,
                     textEnphasis1: ConsequencesTexts.topic3enphasis1,
                     textEnphasis2: ConsequencesTexts.topic3enphasis2,
                     color: colors[6],
