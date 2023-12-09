@@ -10,6 +10,7 @@ class WebAppBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return AppBar(
       titleSpacing: 0,
+      scrolledUnderElevation: 0,
       backgroundColor: colors[5],
       title: Container(
         margin: const EdgeInsets.all(0),
